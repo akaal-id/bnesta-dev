@@ -94,7 +94,7 @@
   padding-bottom: 0rem;
 }
 
-.inputRow input {
+  .inputRow input {
   flex: 1;
   background: transparent;
   padding: 0rem 0.5rem;

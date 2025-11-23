@@ -1,0 +1,105 @@
+/* Centralized button styles reusing existing patterns from the codebase */
+
+.primaryButton {
+  padding: 0.35rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  background: var(--bnesta-ochre);
+  border: 1px solid var(--bnesta-ochre);
+  color: var(--bnesta-rice);
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.primaryButton:hover {
+  background: var(--bnesta-ochre-120);
+  color: var(--bnesta-rice);
+}
+
+.outlineButton {
+  position: relative;
+  padding: 0.35rem 0;
+  padding-right: 1rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: var(--bnesta-ochre);
+  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.outlineButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--bnesta-ochre);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.outlineButton:hover::after {
+  width: 100%;
+}
+
+.tertiaryButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--bnesta-ochre);
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menuButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.bookButton {
+  width: 100%;
+  max-width: 480px;
+  font-weight: 300;
+  padding: 0.2rem 1rem;
+  border: 0.5px solid var(--bnesta-rice);
+  color: var(--bnesta-rice);
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  letter-spacing: 0.4rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+.bookButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--bnesta-rice);
+  z-index: -1;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bookButton:hover {
+  color: rgb(31, 26, 23);
+}
+.bookButton:hover::before {
+  width: 100%;
+}
+
+/* Utility: a wider book button when needed */
+.bookButton.wide {
+  max-width: 640px;
+}

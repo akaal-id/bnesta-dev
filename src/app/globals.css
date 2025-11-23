@@ -11,7 +11,7 @@
   --bnesta-sand: #f7f3ef;
   --bnesta-body: #85735f;
   --bnesta-muted: #b8a694;
-  --page-background: #f5f1ec;
+  --page-background: var(--bnesta-rice);
   --font-body: var(--font-mulish, "Mulish", system-ui, -apple-system, sans-serif);
   --font-display: var(
     --font-lora,
@@ -29,7 +29,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--page-background);
+  background: var(--page-background); /* now uses --bnesta-rice as base */
   color: var(--bnesta-deep-espresso);
   font-family: var(--font-body);
   line-height: 1.6;

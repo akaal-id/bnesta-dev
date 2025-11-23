@@ -1,5 +1,5 @@
 import styles from "./Location.module.css";
-import Button from "../Button/Button";
+import buttonStyles from "../Button/Button.module.css";
 
 export function Location() {
   return (
@@ -23,9 +23,9 @@ export function Location() {
         <p>
         Jl. Tunjung I, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80117
         </p>
-        <Button className={styles.outlineButton} href="#">
+        <a className={buttonStyles.outlineButton} href="#">
           See Detail →
-        </Button>
+        </a>
       </div>
     </section>
   );

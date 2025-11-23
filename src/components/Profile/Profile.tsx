@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Profile.module.css";
-import Button from "../Button/Button";
+import buttonStyles from "../Button/Button.module.css";
 
 export function Profile() {
   return (
@@ -48,9 +48,9 @@ export function Profile() {
 
         {/* Bottom Button */}
         <div className={styles.actionWrapper}>
-          <Button type="button" className={styles.outlineButton}>
+          <button type="button" className={buttonStyles.outlineButton}>
             Discover more
-          </Button>
+          </button>
         </div>
       </div>
     </section>

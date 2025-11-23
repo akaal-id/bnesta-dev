@@ -1,27 +1,38 @@
-import React from 'react';
+"use client";
 
-type Props = (
-  | (React.ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined })
-  | (React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string })
-) & {
-  children: React.ReactNode;
-  className?: string;
+import React from "react";
+import styles from "./Button.module.css";
+
+type Variant =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "menu"
+  | "book";
+
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: Variant;
+  wide?: boolean;
 };
 
-export default function Button({ children, className, ...rest }: Props) {
-  // If href present, render an anchor
-  if ((rest as any).href) {
-    const { href, ...anchorProps } = rest as React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string };
-    return (
-      <a className={className} href={href} {...anchorProps}>
-        {children}
-      </a>
-    );
-  }
+export function Button({ variant = "primary", wide = false, className = "", children, ...rest }: Props) {
+  const cls = [
+    variant === "primary" ? styles.primaryButton : "",
+    variant === "secondary" ? styles.outlineButton : "",
+    variant === "tertiary" ? styles.tertiaryButton : "",
+    variant === "menu" ? styles.menuButton : "",
+    variant === "book" ? styles.bookButton : "",
+    variant === "book" && wide ? `${styles.bookButton} ${styles.wide}` : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <button className={className} {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}>
+    <button className={cls} {...rest}>
       {children}
     </button>
   );
 }
+
+export default Button;

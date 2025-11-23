@@ -7,7 +7,6 @@ import {
   MessageSquare, 
   Facebook, 
   Instagram, 
-  Twitter, 
   Linkedin
 } from "lucide-react";
 

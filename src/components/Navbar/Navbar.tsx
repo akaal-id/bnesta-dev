@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
-import Button from "../Button/Button";
+import buttonStyles from "../Button/Button.module.css";
 
 const navLinks = [
   { label: "Home", active: true },
@@ -85,12 +85,12 @@ export function Navbar() {
             EN/ID
             <span aria-hidden>▾</span>
           </span>
-          <Button className={styles.outlineButton} type="button">
+          <button className={buttonStyles.outlineButton} type="button">
             Contact Us
-          </Button>
-          <Button className={styles.primaryButton} type="button">
+          </button>
+          <button className={buttonStyles.primaryButton} type="button">
             Book Now<span aria-hidden>→</span>
-          </Button>
+          </button>
         </div>
       </div>
     </header>

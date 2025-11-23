@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Terrace.module.css";
-import Button from "../Button/Button";
+import buttonStyles from "../Button/Button.module.css";
 
 const habits = [
   { id: "01", label: "A clearer mind" },
@@ -37,9 +37,9 @@ export function Terrace() {
               It is a practical, comfortable setting where slow living feels
               natural.
             </p>
-            <Button type="button" className={styles.outlineButton}>
+            <button type="button" className={buttonStyles.outlineButton}>
               Discover more
-            </Button>
+            </button>
           </div>
         </div>
 
