@@ -1,6 +1,6 @@
-.section {
+  .section {
     padding: 12rem 1.5rem 8rem; /* Padding atas/bawah yang lega */
-    background: var(--bnesta-rice);
+    background: transparent; /* inherit global base */
     color: var(--bnesta-volcanic);
     display: flex;
     flex-direction: column;

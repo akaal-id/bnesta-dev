@@ -1,7 +1,7 @@
 .section {
   /* Updated padding to match the spacious look of the image */
   padding: 12rem 2rem; 
-  background: var(--bnesta-rice);
+  background: transparent;
 }
 
 .container {
@@ -95,6 +95,11 @@
   align-items: baseline;
   gap: 1rem;
   width: fit-content;
+  transition: transform 0.8s ease;
+}
+
+.item:hover {
+  transform: translateY(-12px);
 }
 
 /* The Zig-Zag Magic */

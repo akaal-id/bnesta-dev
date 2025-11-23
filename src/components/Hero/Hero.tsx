@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import Button from "../Button/Button";
 
 export function Hero() {
   return (
@@ -24,9 +25,9 @@ export function Hero() {
           </h1>
         </div>
         <div className={styles.actions}>
-          <button type="button" className={styles.bookButton}>
+          <Button type="button" className={styles.bookButton}>
             Book Now
-          </button>
+          </Button>
         </div>
       </div>
     </section>

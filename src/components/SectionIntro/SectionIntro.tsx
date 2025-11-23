@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./SectionIntro.module.css";
+import Button from "../Button/Button";
 
 export function SectionIntro() {
   return (
@@ -28,9 +29,9 @@ export function SectionIntro() {
           With privacy at the center, your villa becomes a personal space to
           breathe, reset, and recover.
         </p>
-        <button className={styles.outlineButton} type="button">
+        <Button className={styles.outlineButton} type="button">
           Discover more
-        </button>
+        </Button>
       </div>
     </section>
   );

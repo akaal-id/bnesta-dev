@@ -1,12 +1,13 @@
 .intro {
   padding: 12rem 3rem; /* Adjusted padding */
-  background: var(--bnesta-rice);
+  background: transparent;
   display: flex;
   flex-direction: row; /* Side by side layout */
-  align-items: center; /* Vertically center the image and text */
+  align-items: space-between; /* Vertically center the image and text */
   justify-content: center;
   gap: 5rem; /* Space between image and text */
-  margin: 0 auto;
+  margin: 4rem auto 0;
+  max-width: 1200px;
 }
 
 /* --- LEFT SIDE: SQUARE IMAGE --- */

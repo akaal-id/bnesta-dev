@@ -6,7 +6,7 @@
   z-index: 20;
   padding: 0rem 3rem;
   
-  /* Gradient Background */
+  /* Gradient Background - keep subtle overlay to sit above page base */
   background: linear-gradient(
     to bottom,
     rgba(31, 26, 23, 0.65),
@@ -25,7 +25,7 @@
 
 /* --- SCROLLED STATE (White Background / Light Mode style) --- */
 .navbar.scrolled {
-  /* Background becomes Rice (White) */
+  /* Background becomes Rice (White) for clarity on scroll */
   background: var(--bnesta-rice); 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 0rem 3rem;
@@ -59,7 +59,7 @@
 
 .logoImage {
   transform: scale(1);
-  filter: brightness(0); /* Default: White Logo */
+  filter: invert(1); /* Default: White Logo */
   transform-origin: left center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
